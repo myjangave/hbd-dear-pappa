@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="" name="apple-mobile-web-app-title">
+    <meta name="apple-touch-fullscreen" content="yes" />
+    
+    <title>Happy-Birthday-Pappa</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="everything">
+    <nav>
+        <a href="#" class="nav__link nav__link--active">
+         <i class="material-icons nav__icon">schedule</i>
+         <span class="nav__text">time-remaining</span>
+        </a>
+        <a href="#" class="nav__link">
+         <i class="material-icons nav__icon">collections</i>
+         <span class="nav__text">SomePics</span>
+        </a>
+        <a href="#" class="nav__link">
+            <i class="material-icons nav__icon">person</i>
+            <span class="nav__text">About Dad</span>
+           </a>
+     </nav>
+    <div class="container">
+        <div class="svg hide" id="svg"></div>
+        <section class="time-remaining">
+      <div>
+          <h2 id="sohamop">time-remaining</h2>
+          <div class="countdown hide-this">
+            <div class="container-day">
+                <h3 class="day">Time</h3>
+                <h3>Day</h3>
+            </div>
+            <div class="container-hour">
+                <h3 class="hour">Time</h3>
+                <h3>Hour</h3>
+            </div>
+            <div class="container-minute">
+                <h3 class="minute">Time</h3>
+                <h3>Minute</h3>
+            </div>
+            <div class="container-second">
+                <h3 class="second">Time</h3>
+                <h3>Second</h3>
+            </div>
+          </div>
+      </div>
+      <div>
+      <img class="waiting" src="./undraw_Birthday_cake_2wxy.svg" alt="">
+    </section>
+    <section class="some-pics">
+      <div class="main-text">
+          <h2>Some Pics</h2>
+      </div>
+
+       <!-- Swiper -->
+    <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <img class="srcunplash" src="https://source.unsplash.com/random" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img class="srcunplash" src="https://source.unsplash.com/random" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img class="srcunplash" src="https://source.unsplash.com/random" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img class="srcunplash" src="https://source.unsplash.com/random" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img class="srcunplash" src="https://source.unsplash.com/random" alt="">
+        </div>
+
+        </div>
+         <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <br><br><br><br><br><br><br><br><br>
+
+
+    </section>
+</div>    
+
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.11/lottie.min.js" integrity="sha512-jbTBHn1aXqglu6As1bUWxdPYc9b1uMHtreBM30oW3HbNFDS/eO1n+f98l4qcmw2l7CAdjWSbu3wVjm9SKISOaw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        const svgContainer = document.getElementById('svg');
+        const animItem = bodymovin.loadAnimation({
+            wrapper: svgContainer,
+            animType: 'svg',
+            loop: false,
+            autoplay: false,
+            path: 'https://assets2.lottiefiles.com/packages/lf20_u4yrau.json'
+        });
+    </script>
+
+    <script>
+        //  <!-- Initialize Swiper -->
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 'auto',
+        spaceBetween: 40,
+        centeredSlides: true,
+        grabCursor: true,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <!-- <script>
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+      
+      var x = document.getElementsByClassName("everything");
+      x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
+
+
+      </script> -->
+
+</body>
+</html>
